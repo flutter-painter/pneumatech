@@ -1,4 +1,5 @@
 import 'package:http/http.dart';
+import 'package:meta/meta.dart';
 import 'package:pneumatech/src/status.dart';
 
 class ResponsePreCooked extends Response {
@@ -10,7 +11,7 @@ class ResponsePreCooked extends Response {
     final this.status,
     final int statusCode,
     final String body, {
-    required this.bodyList,
+    @required this.bodyList,
     this.message = '',
   }) : super(body, statusCode);
 }
